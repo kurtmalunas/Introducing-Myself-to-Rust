@@ -152,57 +152,122 @@
         </ul>
         <h3><b>Source Code</b></h3>
         <p>Please be aware that I did not bother handling errors as I focused more on its functionality.</p>
-        <pre>
+        <ul>
+            <li>
+                <p><b>Guessing game<br></b></p>
+                <pre>
             <code>
                 //Input/Output library from the standard library "std"
-use std::io::{self, Read};
-//for random number generators
-use rand::{Rng, random};
-fn main() {
-  println!("Guess a number between 1 and 100");
-  println!("Enter your guess: ");
-
-  let mut guess = String::new();
-
-  //Read user input and store to the variable
-  io::stdin().read_line(&mut guess).expect("Error");
-  
-  let guess_number: i32 = guess.trim().parse().expect("Error");
-  let mut random_number = rand::thread_rng().gen_range(1..101);
-  match check(guess_number, random_number) {
-    Comparison::Less => println!("You Guessed too small"),
-    Comparison::Greater => println!("You Guessed too big"),
-    Comparison::Close => println!("Close!!"),
-    Comparison::Equal => println!("You Win!!"),
-  }
-}
-
-fn check(guess: i32, rand: i32) -> Comparison {
-    let difference = guess - rand;
-    if guess > rand && difference <= 10 {
-        Comparison::Close
-    } else if guess > rand && difference > 10 {
-        Comparison::Greater
-    } else if guess < rand && difference >= -10 {
-        Comparison::Close
-    } else if guess < rand && difference < -10 {
-      Comparison::Less
-    } else {
-        Comparison::Equal
-    } 
-}
-
-enum Comparison {
-    Less,
-    Greater,
-    Close,
-    Equal
-}
-
-
+                use std::io::{self, Read};
+                //for random number generators
+                use rand::{Rng, random};
+                fn main() {
+                  println!("Guess a number between 1 and 100");
+                  println!("Enter your guess: ");
+                
+                  let mut guess = String::new();
+                
+                  //Read user input and store to the variable
+                  io::stdin().read_line(&mut guess).expect("Error");
+                  
+                  let guess_number: i32 = guess.trim().parse().expect("Error");
+                  let mut random_number = rand::thread_rng().gen_range(1..101);
+                  match check(guess_number, random_number) {
+                    Comparison::Less => println!("You Guessed too small"),
+                    Comparison::Greater => println!("You Guessed too big"),
+                    Comparison::Close => println!("Close!!"),
+                    Comparison::Equal => println!("You Win!!"),
+                  }
+                }
+                
+                fn check(guess: i32, rand: i32) -> Comparison {
+                    let difference = guess - rand;
+                    if guess > rand && difference <= 10 {
+                        Comparison::Close
+                    } else if guess > rand && difference > 10 {
+                        Comparison::Greater
+                    } else if guess < rand && difference >= -10 {
+                        Comparison::Close
+                    } else if guess < rand && difference < -10 {
+                      Comparison::Less
+                    } else {
+                        Comparison::Equal
+                    } 
+                }
+                
+                enum Comparison {
+                    Less,
+                    Greater,
+                    Close,
+                    Equal
+                }
             </code>
         </pre>
-
+            </li>
+            <li>
+                <p><b>Guessing Game (Enhanced)</b></p>
+                <pre><code>
+                    use std::io::{self, Read};
+                    use rand::{Rng, random};
+                    fn main() {
+                      println!("Guess a number between 1 and 100");
+                      println!("How many times do you want to play the game? ");
+                      
+                      let mut overall = String::new();
+                      io::stdin().read_line(&mut overall).expect("Error");
+                      let overall_number: i32 = overall.trim().parse().expect("Error");
+                      let mut iteration = 0;
+                      let mut correct = 0;
+                      while iteration < overall_number {
+                        println!("Guess the number: ");
+                        let mut guess = String::new();
+                        io::stdin().read_line(&mut guess).expect("Error");
+                        let guess_number: i32 = guess.trim().parse().expect("Error");
+                        let mut random_number = rand::thread_rng().gen_range(1..101);
+                    
+                        match check(guess_number, random_number) {
+                        Comparison::Less => println!("You Guessed too small"),
+                        Comparison::Greater => println!("You Guessed too big"),
+                        Comparison::Close => println!("Close!!"),
+                        Comparison::Equal => {
+                            correct+=1;
+                            println!("You Win!!")
+                        }
+                        }
+                          iteration += 1;
+                      }
+                    
+                      println!("Your correct guesses are {correct} out of {iteration}");
+                    }
+                    
+                    fn check(guess: i32, rand: i32) -> Comparison {
+                        let difference = guess - rand;
+                        if guess > rand && difference <= 10 {
+                            Comparison::Close
+                        } else if guess > rand && difference > 10 {
+                            Comparison::Greater
+                        } else if guess < rand && difference >= -10 {
+                            Comparison::Close
+                        } else if guess < rand && difference < -10 {
+                          Comparison::Less
+                        } else {
+                            Comparison::Equal
+                        } 
+                    }
+                    
+                    enum Comparison {
+                        Less,
+                        Greater,
+                        Close,
+                        Equal
+                    }
+                    </code></pre>
+            </li>
+        </ul>
+        <h3><b>Next</b></h3>
+        <p>With all the basics jot down, I can start working on more complex projects such as file handling, connecting
+            to a database and/or creating a simple web application. *Cough* I haven't really got all the fundamentals,
+            but I'll manage. Given how strict the language is, I expect to have an easier time than using Java.</p>
     </div>
 </body>
 
