@@ -14,7 +14,8 @@
 <body>
     <div>
         <h1><b>The Rust Programming Language</b></h1>
-        <h2><b>Introduction | Installation | Concepts | Project Idea | Findings | Source Code | Next</b></h2>
+
+        <h2><b>Introduction | Installation | Concepts | Project Idea | Findings | Source Code | Next</b></h2><br>
         <h3><b>Introduction</b></h3>
         <p>Rust is an open-source system level programming language for developing software that is typically written
             in other popular languages such as C or C++. Created by Mozilla Research employee Graydon Hoare to address
@@ -33,7 +34,7 @@
                     thanks to Rust's syntax and language metaphor, as the compiler will force you to fix them before it
                     even compiles.
                     Null Pointers: Java vs. Rust
-                </p>
+                </p><img id="nullPoint" src="nullPoint.JPG">
             </li>
             <li>
                 <p><b>Speed</b> - Performance is improved by Rust's zero cost abstraction and the lack of a garbage
@@ -56,7 +57,7 @@
             that Rust is a great language to learn given that Stack Overflow has been the most popular exchange network
             for programmers. Why don't we get it a try?
         </p>
-        <h3><b>Installation</b></h3>
+        <br><h3><b>Installation</b></h3>
         <p>This section wasn't meant to be included, but since installing Rust on my computer took so long, I figured
             I'd share what I did.<br><br><b>Recommended Installation is by using rustup: <br> Since I'm running on
                 Windows</b>
@@ -76,14 +77,14 @@
                 <p>Make sure that the path environment variable for all Rust Development related tools that are
                     installed to the “~/.cargo/bin” directory is available in your system’s environment variables. If
                     not,
-                    manually type yours in.</p>
+                    manually type yours in.</p><img id="environ" src="environmentVar.JPG">
             </li>
             <li>
                 <p>For the GUI, I decided to use Visual Studio Code and installed the “rust-analyzer” extension. Now we
                     can start writing Rust!</p>
             </li>
         </ol>
-        <h3><b>Concepts</b></h3>
+        <br><h3><b>Concepts</b></h3>
         <ul>
             <li>
                 <p><b>Rustup</b> - we installed rustup by official recommendation. It is a toolchain multiplexer
@@ -98,7 +99,7 @@
                 <p><b>Rustc</b>responsible for translating Rust source code to machine language.</p>
             </li>
         </ul>
-        <h3><b>Project Ideas</b></h3>
+        <br><h3><b>Project Ideas</b></h3>
         <ul>
             <li>
                 <p><b>Guessing Game</b> - The program will generate an integer between 1 and 100. It will then prompt
@@ -111,7 +112,7 @@
                     user's total number of correct guesses over the number of games they played.</p>
             </li>
         </ul>
-        <h3><b>Findings</b></h3>
+        <br><h3><b>Findings</b></h3>
         <ul>
             <li>
                 <p>Variables are immutable by default for improved safety and better caching. Add mut keyword to the
@@ -130,7 +131,7 @@
                     of enums. </p>
             </li>
             <li>
-                <p>It has an organized library for errors. (https://doc.rust-lang.org/error_codes/error-index.html)</p>
+                <p>It has an organized library for errors. (https://doc.rust-lang.org/error_codes/error-index.html)</p><img src="errorLib.JPG">
             </li>
             <li>
                 <p>It has a peculiar way of making objects. An object requires a struct (a fixed set of data in a
@@ -139,7 +140,7 @@
             </li>
             <li>
                 <p>Printing variables or methods inside a string is made easier compared to Java where we have to
-                    concatenate them with each other. See line 36.</p>
+                    concatenate them with each other. See line 36.</p><img src="rustStruct.png">
             </li>
             <li>
                 <p>The language comes with a standard library and using a crate can get us more functionality into our
@@ -150,7 +151,7 @@
                     design. Although unpleasant, it's a good thing.</p>
             </li>
         </ul>
-        <h3><b>Source Code</b></h3>
+        <br><h3><b>Source Code</b></h3>
         <p>Please be aware that I did not bother handling errors as I focused more on its functionality.</p>
         <ul>
             <li>
@@ -264,7 +265,7 @@
                     </code></pre>
             </li>
         </ul>
-        <h3><b>Next</b></h3>
+        <br><h3><b>Next</b></h3>
         <p>With all the basics jot down, I can start working on more complex projects such as file handling, connecting
             to a database and/or creating a simple web application. *Cough* I haven't really got all the fundamentals,
             but I'll manage. Given how strict the language is, I expect to have an easier time than using Java.</p>
