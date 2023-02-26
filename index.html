@@ -10,13 +10,14 @@
 
 <body>
     <div>
-        <h1>Learning the Rust Programming Language</h1>
-        <h2>Introduction | Installation | Concepts | Project Idea | Findings | Source Code | Next</h2>
-        <h3>Introduction</h3>
+        <h1><b>The Rust Programming Language</b></h1>
+        <h2><b>Introduction | Installation | Concepts | Project Idea | Findings | Source Code | Next</b></h2>
+        <h3><b>Introduction</b></h3>
         <p>Rust is an open-source system level programming language for developing software that is typically written
             in other popular languages such as C or C++. Created by Mozilla Research employee Graydon Hoare to address
             issues concerning memory errors and building concurrent programs in C and C++. Some notable programs you
-            could build with this language are CLI tools, web apps, network services, and embedded systems.<br>As a Java
+            could build with this language are CLI tools, web apps, network services, and embedded systems.<br><br>As a
+            Java
             developer who mainly writes high-level codes, learning Rust may be a daunting task. For the time being, I
             will limit myself to using Rust in the same way that I use Java, gradually progressing to writing
             system-level code. However, There are benefits to using this language for a better coding experience, this
@@ -24,20 +25,23 @@
         </p>
         <ul>
             <li>
-                <p>Memory safety – Common memory-related issues are avoided before the programme is even compiled,
+                <p><b>Memory safety</b> – Common memory-related issues are avoided before the programme is even
+                    compiled,
                     thanks to Rust’s syntax and language metaphor, as the compiler will force you to fix them before it
                     even compiles.
                     Null Pointers: Java vs. Rust
                 </p>
             </li>
             <li>
-                <p>Speed – Performance is improved by Rust’s zero cost abstraction and the lack of a garbage collector.
+                <p><b>Speed</b> – Performance is improved by Rust’s zero cost abstraction and the lack of a garbage
+                    collector.
                     If you didn’t know, Java’s garbage collector creates some runtime overhead that is out of our
                     control as programmers.
                 </p>
             </li>
             <li>
-                <p>Concurrency – By leveraging data ownership and type checking, many concurrency errors are flagged by
+                <p><b>Concurrency</b> - By leveraging data ownership and type checking, many concurrency errors are
+                    flagged by
                     the compiler rather than discovered at runtime.
                 </p>
             </li>
@@ -49,6 +53,48 @@
             that Rust is a great language to learn given that Stack Overflow has been the most popular exchange network
             for programmers. Why don’t we get it a try?
         </p>
+        <h3><b>Installation</b></h3>
+        <p>This section wasn’t meant to be included, but since installing Rust on my computer took so long, I figured
+            I’d share what I did.<br><br><b>Recommended Installation is by using rustup: <br> Since I’m running on
+                Windows</b>
+        </p>
+        <ol>
+            <li>
+                <p>I started by downloading the Rust installer in the official site.</p>
+            </li>
+            <li>
+                <p>Download Visual Studio C++ Build tools. Open and install the “Desktop development with C++” workload.
+                </p>
+            </li>
+            <li>
+                <p>Open the Rust installer and proceed with the default installation.</p>
+            </li>
+            <li>
+                <p>Make sure that the path environment variable for all Rust Development related tools that are
+                    installed to the “~/.cargo/bin” directory is available in your system’s environment variables. If
+                    not,
+                    manually type yours in.</p>
+            </li>
+            <li>
+                <p>For the GUI, I decided to use Visual Studio Code and installed the “rust-analyzer” extension. Now we
+                    can start writing Rust!</p>
+            </li>
+        </ol>
+        <h3><b>Concepts</b></h3>
+        <ul>
+            <li>
+                <p><b>Rustup</b> - we installed rustup by official recommendation. It is a toolchain multiplexer
+                    responsible for installing, managing, and presenting Rust toolchains.</p>
+            </li>
+            <li>
+                <p><b>Cargo</b> - it acts as the build system and package manager for Rust. It is a tool used to help
+                    download and manage the libraries that our code needs. This is installed automatically by rustup.
+                </p>
+            </li>
+            <li>
+                <p><b>Rustc</b>responsible for translating Rust source code to machine language.</p>
+            </li>
+        </ul>
     </div>
 </body>
 
