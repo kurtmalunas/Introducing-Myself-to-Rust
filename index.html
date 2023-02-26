@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" type="text/css" href="rustblog1.css"> <!--external css file-->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap"
+        rel="stylesheet">
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Learning the Rust Programming Language</title>
     <style></style>
@@ -25,17 +28,17 @@
         </p>
         <ul>
             <li>
-                <p><b>Memory safety</b> – Common memory-related issues are avoided before the programme is even
+                <p><b>Memory safety</b> - Common memory-related issues are avoided before the programme is even
                     compiled,
-                    thanks to Rust’s syntax and language metaphor, as the compiler will force you to fix them before it
+                    thanks to Rust's syntax and language metaphor, as the compiler will force you to fix them before it
                     even compiles.
                     Null Pointers: Java vs. Rust
                 </p>
             </li>
             <li>
-                <p><b>Speed</b> – Performance is improved by Rust’s zero cost abstraction and the lack of a garbage
+                <p><b>Speed</b> - Performance is improved by Rust's zero cost abstraction and the lack of a garbage
                     collector.
-                    If you didn’t know, Java’s garbage collector creates some runtime overhead that is out of our
+                    If you didn't know, Java's garbage collector creates some runtime overhead that is out of our
                     control as programmers.
                 </p>
             </li>
@@ -46,16 +49,16 @@
                 </p>
             </li>
         </ul>
-        <p>Sure, Java is known for many criticisms. In fact, I’ve met some people who hate it, so why should we learn
-            Rust when it wouldn’t be surprising to say that other programming languages are superior to Java? Well, Java
-            isn’t entirely bad, just like its rivals, it has its benefits and disadvantages. Rust, on the other, hand
+        <p>Sure, Java is known for many criticisms. In fact, I've met some people who hate it, so why should we learn
+            Rust when it wouldn't be surprising to say that other programming languages are superior to Java? Well, Java
+            isn't entirely bad, just like its rivals, it has its benefits and disadvantages. Rust, on the other, hand
             has been regarded as the most loved programming language on Stack Overflow for many years. It is safe to say
             that Rust is a great language to learn given that Stack Overflow has been the most popular exchange network
-            for programmers. Why don’t we get it a try?
+            for programmers. Why don't we get it a try?
         </p>
         <h3><b>Installation</b></h3>
-        <p>This section wasn’t meant to be included, but since installing Rust on my computer took so long, I figured
-            I’d share what I did.<br><br><b>Recommended Installation is by using rustup: <br> Since I’m running on
+        <p>This section wasn't meant to be included, but since installing Rust on my computer took so long, I figured
+            I'd share what I did.<br><br><b>Recommended Installation is by using rustup: <br> Since I'm running on
                 Windows</b>
         </p>
         <ol>
@@ -93,6 +96,58 @@
             </li>
             <li>
                 <p><b>Rustc</b>responsible for translating Rust source code to machine language.</p>
+            </li>
+        </ul>
+        <h3><b>Project Ideas</b></h3>
+        <ul>
+            <li>
+                <p><b>Guessing Game</b> - The program will generate an integer between 1 and 100. It will then prompt
+                    the
+                    user to enter a number and then the program will indicate how close the guess is to the generated
+                    number.</p>
+            </li>
+            <li>
+                <p><b>Guessing Game (Enhanced)</b>Works the same as the former but now the program will account the
+                    user's total number of correct guesses over the number of games they played.</p>
+            </li>
+        </ul>
+        <h3><b>Findings</b></h3>
+        <ul>
+            <li>
+                <p>Variables are immutable by default for improved safety and better caching. Add mut keyword to the
+                    variable name to make it mutable.</p>
+            </li>
+            <li>
+                <p>Rust can specify the working space of the data types that you use. Let say I made a variable named
+                    "integer" by using the statement "let integer = 12", Rust will assume that it's a data type of
+                    i32(an integer with 32 bit of working space), we can specify this by using a semi-colon right after
+                    the variable name and specify the data type as follows "let integer: i64 = 32" giving this data type
+                    a 64 bit working space.</p>
+            </li>
+            <li>
+                <p>In Rust, you can create types that represents data which may be one of a few different variants
+                    within the list. Let say, you want to make an integer that can only be between 1 to 10. You can use
+                    of enums. </p>
+            </li>
+            <li>
+                <p>It has an organized library for errors. (https://doc.rust-lang.org/error_codes/error-index.html)</p>
+            </li>
+            <li>
+                <p>It has a peculiar way of making objects. An object requires a struct (a fixed set of data in a
+                    single unit) body and an impl (responsible for defining methods of a struct) block. See Line 1-29.
+                </p>
+            </li>
+            <li>
+                <p>Printing variables or methods inside a string is made easier compared to Java where we have to
+                    concatenate them with each other. See line 36.</p>
+            </li>
+            <li>
+                <p>The language comes with a standard library and using a crate can get us more functionality into our
+                    code. They're basically external packages in Rust.</p>
+            </li>
+            <li>
+                <p>This language is a pain in the butt. I frequently get compile errors because of the compiler’s
+                    design. Although unpleasant, it's a good thing.</p>
             </li>
         </ul>
     </div>
