@@ -150,6 +150,59 @@
                     design. Although unpleasant, it's a good thing.</p>
             </li>
         </ul>
+        <h3><b>Source Code</b></h3>
+        <p>Please be aware that I did not bother handling errors as I focused more on its functionality.</p>
+        <pre>
+            <code>
+                //Input/Output library from the standard library "std"
+use std::io::{self, Read};
+//for random number generators
+use rand::{Rng, random};
+fn main() {
+  println!("Guess a number between 1 and 100");
+  println!("Enter your guess: ");
+
+  let mut guess = String::new();
+
+  //Read user input and store to the variable
+  io::stdin().read_line(&mut guess).expect("Error");
+  
+  let guess_number: i32 = guess.trim().parse().expect("Error");
+  let mut random_number = rand::thread_rng().gen_range(1..101);
+  match check(guess_number, random_number) {
+    Comparison::Less => println!("You Guessed too small"),
+    Comparison::Greater => println!("You Guessed too big"),
+    Comparison::Close => println!("Close!!"),
+    Comparison::Equal => println!("You Win!!"),
+  }
+}
+
+fn check(guess: i32, rand: i32) -> Comparison {
+    let difference = guess - rand;
+    if guess > rand && difference <= 10 {
+        Comparison::Close
+    } else if guess > rand && difference > 10 {
+        Comparison::Greater
+    } else if guess < rand && difference >= -10 {
+        Comparison::Close
+    } else if guess < rand && difference < -10 {
+      Comparison::Less
+    } else {
+        Comparison::Equal
+    } 
+}
+
+enum Comparison {
+    Less,
+    Greater,
+    Close,
+    Equal
+}
+
+
+            </code>
+        </pre>
+
     </div>
 </body>
 
