@@ -1,1 +1,16 @@
+@media all {
+    body {
+        background-color: transparent;
+        color: #454138;
+        font-family: 'helvetica', sans-serif;
+        font-weight: lighter;
+        height: 800px;
+        margin: auto;
+        width: 700px;
+    }
 
+    div {
+        background-color: #bab5a1;
+        border: 10px solid black;
+    }
+}
